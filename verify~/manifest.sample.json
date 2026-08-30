@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+    "com.kwonstudio.s3": "file:C:/UnityProjectSet/Packages/Kwon.S3",
+    "com.kwonstudio.cloudsave": "file:C:/UnityProjectSet/Packages/Kwon.CloudSave",
+    "com.unity.modules.unitywebrequest": "1.0.0",
+    "com.unity.modules.jsonserialize": "1.0.0",
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.androidjni": "1.0.0"
+  }
+}

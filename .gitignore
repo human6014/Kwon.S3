@@ -1,0 +1,11 @@
+# Unity/IDE 가 옆에 만드는 것들
+*.csproj
+*.sln
+*.user
+.vs/
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

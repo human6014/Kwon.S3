@@ -1,0 +1,7 @@
+# Unity 소스·메타는 LF 로 고정한다. 머신마다 core.autocrlf 가 달라도 diff 가 흔들리지 않게.
+* text=auto eol=lf
+*.cs        text eol=lf
+*.meta      text eol=lf
+*.asmdef    text eol=lf
+*.json      text eol=lf
+*.md        text eol=lf

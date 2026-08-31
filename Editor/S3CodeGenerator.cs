@@ -18,7 +18,7 @@ namespace KwonStudio.S3.EditorTools
         private const string FileHeader =
             "// ------------------------------------------------------------------\n" +
             "// 이 파일은 S3 Sheet Importer가 생성했습니다. 직접 수정하지 마세요.\n" +
-            "// 시트를 고치고 TD/데이터 도구 의 S3 탭에서 다시 임포트하면 갱신됩니다.\n" +
+            "// 시트를 고치고 Tools/KwonStudio/S3 임포터 에서 다시 임포트하면 갱신됩니다.\n" +
             "// ------------------------------------------------------------------\n";
 
         public static string DataClassName(string tableName) => tableName + "Data";

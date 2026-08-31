@@ -62,7 +62,7 @@ namespace KwonStudio.S3
                     _isMissingReported = true;
                     Debug.LogError(
                         $"[S3] 설정 에셋이 없습니다. Assets/Resources/{ResourcePath}.asset 을 만들어 " +
-                        "배포 주소와 문서 ID를 채워주세요. (TD/데이터 도구 → S3 탭에서 만들 수 있습니다.)");
+                        "배포 주소와 문서 ID를 채워주세요. (Tools/KwonStudio/S3 임포터 에서 만들 수 있습니다.)");
                 }
 
                 return _instance;

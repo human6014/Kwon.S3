@@ -5,11 +5,24 @@ using UnityEngine;
 
 namespace KwonStudio.S3.EditorTools
 {
-    /// <summary>
-    /// 구글 스프레드시트를 테이블 에셋으로 굽는 창. <c>TD/데이터 도구</c> 의 S3 탭이다.
-    /// </summary>
+    /// <summary>구글 스프레드시트를 C# 코드로 굽는 창. <c>Tools/KwonStudio/S3 임포터</c>.</summary>
     public class S3ImporterWindow : EditorWindow
     {
+        /// <summary>메뉴에서 이 창을 연다.</summary>
+        /// <remarks>
+        /// 도구를 한 창에 모으고 싶은 프로젝트는 이 메뉴 대신 <see cref="OnGUI"/> 를 직접 부르면 된다 —
+        /// 그러라고 <c>public</c> 이다. 다만 그때는 얹는 쪽이 <see cref="EditorWindow.position"/> 을
+        /// 넣어주고(아래 로그 칸이 그 값을 읽는다) 주기적으로 <c>Repaint</c> 도 대신 해줘야 한다.
+        /// 얹힌 창의 <c>Repaint()</c> 는 붙은 창이 없어 아무 일도 하지 않는다.
+        /// </remarks>
+        [MenuItem("Tools/KwonStudio/S3 임포터")]
+        public static void Open()
+        {
+            var window = GetWindow<S3ImporterWindow>("S3 임포터");
+            window.minSize = new Vector2(720f, 480f);
+            window.Show();
+        }
+
         private const string LayoutHelp =
             "시작 행/열이 가리키는 칸부터 아래처럼 세 덩어리로 읽습니다. (아래는 시작이 A1인 경우)\n" +
             "\n" +
@@ -215,7 +228,7 @@ namespace KwonStudio.S3.EditorTools
             _settings = S3ImportSettings.Find();
         }
 
-        /// <summary>이 창은 <c>TD/데이터 도구</c> 안에 얹혀서 그려지므로 public 이다.</summary>
+        /// <summary>다른 창에 얹혀서 그려질 수 있도록 public 이다. <see cref="Open"/> 의 설명 참고.</summary>
         public void OnGUI()
         {
             if (_settings == null)
